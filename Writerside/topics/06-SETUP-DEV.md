@@ -61,7 +61,7 @@ med-info/
 
 Crie o arquivo `backend/.env`:
 
-```properties
+```text
 # App
 NODE_ENV=development
 PORT=3000
