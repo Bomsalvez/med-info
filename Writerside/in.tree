@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="in"
+                 name="Instance Name" start-page="00-README.md">
+
+    <toc-element topic="00-README.md"/>
+    <toc-element topic="01-VISION.md"/>
+    <toc-element topic="02-REQUIREMENTS.md"/>
+    <toc-element topic="03-ARCHITECTURE.md"/>
+    <toc-element topic="04-DATABASE.md"/>
+    <toc-element topic="05-API.md"/>
+    <toc-element topic="06-SETUP-DEV.md"/>
+    <toc-element topic="07-CONVENTIONS.md"/>
+    <toc-element topic="08-DOMAIN-MODELS.md"/>
+    <toc-element topic="09-SECURITY.md"/>
+    <toc-element topic="10-MONETIZATION.md"/>
+</instance-profile>
