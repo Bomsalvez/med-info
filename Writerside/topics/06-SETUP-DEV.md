@@ -4,14 +4,14 @@
 
 ### 1.1 Software Necessario
 
-| Software | Versao | Download |
-|----------|--------|----------|
-| Node.js | 22 LTS | https://nodejs.org/ |
-| Android Studio | Hedgehog+ | https://developer.android.com/studio |
-| Docker Desktop | 24+ | https://www.docker.com/products/docker-desktop |
-| Git | 2.40+ | https://git-scm.com/ |
-| VS Code | Latest | https://code.visualstudio.com/ |
-| PostgreSQL | 16 | Via Docker (recomendado) |
+| Software       | Versao    | Download                                       |
+|----------------|-----------|------------------------------------------------|
+| Node.js        | 22 LTS    | https://nodejs.org/                            |
+| Android Studio | Hedgehog+ | https://developer.android.com/studio           |
+| Docker Desktop | 24+       | https://www.docker.com/products/docker-desktop |
+| Git            | 2.40+     | https://git-scm.com/                           |
+| VS Code        | Latest    | https://code.visualstudio.com/                 |
+| PostgreSQL     | 16        | Via Docker (recomendado)                       |
 
 ### 1.2 Extensoes VS Code Recomendadas
 
@@ -61,7 +61,7 @@ med-info/
 
 Crie o arquivo `backend/.env`:
 
-```env
+```properties
 # App
 NODE_ENV=development
 PORT=3000
@@ -131,7 +131,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./database/init:/docker-entrypoint-initdb.d
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U medinfo -d medinfo_dev"]
+      test: [ "CMD-SHELL", "pg_isready -U medinfo -d medinfo_dev" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -144,7 +144,7 @@ services:
     volumes:
       - redis_data:/data
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: [ "CMD", "redis-cli", "ping" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -427,7 +427,7 @@ CREATE SCHEMA medinfo;
 
 ### 7.2 Makefile (Opcional)
 
-```makefile
+```yaml
 .PHONY: up down logs backend mobile test clean
 
 # Docker
@@ -467,13 +467,13 @@ clean:
 
 ### 8.1 Problemas Comuns
 
-| Problema | Solucao |
-|----------|---------|
-| Porta 5432 em uso | `docker-compose down` ou mude a porta no docker-compose.yml |
-| Gradle sync falha | File > Invalidate Caches > Restart |
-| API nao conecta do emulador | Use `10.0.2.2` em vez de `localhost` |
-| Migrations falham | Verifique se PostgreSQL esta rodando |
-| Redis connection refused | Verifique se o container Redis esta up |
+| Problema                    | Solucao                                                     |
+|-----------------------------|-------------------------------------------------------------|
+| Porta 5432 em uso           | `docker-compose down` ou mude a porta no docker-compose.yml |
+| Gradle sync falha           | File > Invalidate Caches > Restart                          |
+| API nao conecta do emulador | Use `10.0.2.2` em vez de `localhost`                        |
+| Migrations falham           | Verifique se PostgreSQL esta rodando                        |
+| Redis connection refused    | Verifique se o container Redis esta up                      |
 
 ### 8.2 Logs
 
