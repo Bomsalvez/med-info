@@ -97,7 +97,7 @@ LOG_LEVEL=debug
 
 Crie/edite `mobile/local.properties`:
 
-```properties
+```text
 # SDK Path (ajuste conforme seu sistema)
 sdk.dir=/Users/seu-usuario/Library/Android/sdk
 # ou Windows
