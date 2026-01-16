@@ -46,7 +46,7 @@ Representa um usuario do sistema.
 | STUDENT | Estudante validado | Visao tecnica + calculadora |
 | PROFESSIONAL | Profissional validado | Visao tecnica + calculadora |
 
-#### Regras de Negocio
+#### Regras de Negocio {id="regras-de-negocio_1"}
 
 | Regra | Descricao |
 |-------|-----------|
@@ -57,7 +57,7 @@ Representa um usuario do sistema.
 | RN-U05 | GENERAL nao pode acessar visao tecnica |
 | RN-U06 | Apenas usuarios validados podem usar calculadora |
 
-#### Codigo Kotlin (Domain)
+#### Codigo Kotlin (Domain) {id="codigo-kotlin-domain_1"}
 
 ```kotlin
 data class User(
@@ -151,7 +151,7 @@ Representa a validacao de credenciais de um profissional ou estudante.
 | REJECTED | Validacao rejeitada |
 | EXPIRED | Validacao expirada |
 
-#### Regras de Negocio
+#### Regras de Negocio {id="regras-de-negocio_2"}
 
 | Regra | Descricao |
 |-------|-----------|
@@ -369,7 +369,7 @@ data class Brand(
 value class BrandId(val value: String)
 ```
 
-#### Regras de Negocio
+#### Regras de Negocio {id="regras-de-negocio_3"}
 
 | Regra | Descricao |
 |-------|-----------|
@@ -445,7 +445,7 @@ println(result.volumeMl)  // 10.00
 println(result.formula)   // "500 mg / 50 mg/ml = 10.00 ml"
 ```
 
-#### Regras de Negocio
+#### Regras de Negocio {id="regras-de-negocio_4"}
 
 | Regra | Descricao |
 |-------|-----------|
